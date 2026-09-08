@@ -1,0 +1,2 @@
+import Image from "next/image";
+export function ProductPreview(){return <div className="product-preview"><div className="preview-top"><span className="dot"/><span className="dot"/><span className="dot"/><span className="preview-title">Stanfordos School Management System</span></div><Image src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.40.jpeg" alt="Stanfordos school management system interface" width={1366} height={768} priority/></div>}
