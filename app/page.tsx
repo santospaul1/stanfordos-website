@@ -9,8 +9,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ProductPreview from "@/components/ProductPreview";
-import "tailwindcss";
+import ProductPreview from "../components/ProductPreview";
 
 const features: {
   number: string;
@@ -256,30 +255,34 @@ export default function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <div
-                key={feature.number}
-                className="group bg-white p-8 transition hover:bg-slate-50"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
-                    {feature.icon}
-                  </span>
+            {features.map((feature) => {
+              const Icon = feature.icon;
 
-                  <span className="text-sm font-medium text-slate-300">
-                    {feature.number}
-                  </span>
+              return (
+                <div
+                  key={feature.number}
+                  className="group bg-white p-8 transition hover:bg-slate-50"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
+                      <Icon size={22} strokeWidth={2} />
+                    </span>
+
+                    <span className="text-sm font-medium text-slate-300">
+                      {feature.number}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-7 text-xl font-bold text-slate-950">
+                    {feature.title}
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-slate-600">
+                    {feature.description}
+                  </p>
                 </div>
-
-                <h3 className="mt-7 text-xl font-bold text-slate-950">
-                  {feature.title}
-                </h3>
-
-                <p className="mt-3 leading-7 text-slate-600">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
