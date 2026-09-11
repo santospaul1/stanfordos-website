@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,9 +18,14 @@ export default function Navbar() {
           className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-lg font-black text-white shadow-sm">
-            S
-          </div>
+          <Image
+            src="/logo.jpg"
+            alt="Stanfordos"
+            width={180}
+            height={48}
+            priority
+            className="h-10 w-auto object-contain"
+          />
 
           <span className="text-xl font-extrabold tracking-tight text-slate-950">
             Stanfordos
