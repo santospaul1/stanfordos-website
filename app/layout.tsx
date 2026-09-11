@@ -1,28 +1,53 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stanfordos.com"),
+
   title: {
-    default: "Stanfordos |Software That Makes Organizations Smarter",
+    default: "Stanfordos | Software That Makes Organizations Smarter",
     template: "%s | Stanfordos",
   },
+
   description:
-    "Stanford builds modern software solutions that simplify operations and help organizations grow.",
+    "Stanfordos builds modern software solutions that simplify operations, connect teams, and help organizations grow.",
+
   keywords: [
     "Stanfordos",
-    "School Management System",
-    "School Software",
-    "Education Software",
-    "School Management Software",
+    "school management system",
+    "school software",
+    "education software",
+    "student management",
+    "school administration",
+    "attendance management",
+    "school finance",
+    "business software",
   ],
 
+  authors: [{ name: "Stanfordos" }],
+  creator: "Stanfordos",
+
   openGraph: {
+    type: "website",
+    siteName: "Stanfordos",
     title: "Stanfordos | Software That Makes Organizations Smarter",
     description:
-      "Modern software designed to simplify operations and empower organizations.",
-    type: "website",
+      "Modern software solutions that simplify operations and help organizations grow.",
+    url: "https://stanfordos.com",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Stanfordos",
+    description:
+      "Modern software solutions that simplify operations and help organizations grow.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

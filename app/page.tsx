@@ -11,6 +11,14 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductPreview from "../components/ProductPreview";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "School Software That Keeps Everything Connected",
+  description:
+    "Stanfordos builds practical software for simpler, more connected school operations. Explore our School Management System and book a personalized demo.",
+};
+
 const features: {
   number: string;
   title: string;
