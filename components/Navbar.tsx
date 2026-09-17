@@ -19,7 +19,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
           >
             <Image
-                src="/logo.jpg"
+                src="/logo2.jpg"
                 alt="Stanfordos"
                 width={180}
                 height={48}
