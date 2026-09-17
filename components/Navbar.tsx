@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -10,166 +10,168 @@ export default function Navbar() {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-2.5"
-          onClick={() => setOpen(false)}
-        >
-          <Image
-            src="/logo.jpg"
-            alt="Stanfordos"
-            width={180}
-            height={48}
-            priority
-            className="h-10 w-auto object-contain"
-          />
-
-          <span className="text-xl font-extrabold tracking-tight text-slate-950">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-pine-950/80 backdrop-blur-xl">
+        <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-20 lg:px-8">
+          {/* Logo */}
+          <Link
+              href="/"
+              className="flex items-center gap-2.5"
+              onClick={() => setOpen(false)}
+          >
+            <Image
+                src="/logo.jpg"
+                alt="Stanfordos"
+                width={180}
+                height={48}
+                priority
+                className="h-9 w-auto object-contain lg:h-10"
+            />
+            <span className="text-xl font-semibold tracking-tight text-white">
             Stanfordos
           </span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-7 md:flex">
-          {/* Products */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => setProductsOpen(!productsOpen)}
-              className="flex items-center gap-1.5 text-sm font-semibold text-slate-600 transition hover:text-blue-600"
-            >
-              Products
-              <ChevronDown
-                size={15}
-                className={`transition-transform ${
-                  productsOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {productsOpen && (
-              <div className="absolute left-1/2 top-full mt-4 w-80 -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl">
-                <Link
-                  href="/products/school-management"
-                  onClick={() => setProductsOpen(false)}
-                  className="group block rounded-xl p-4 transition hover:bg-slate-50"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                      S
-                    </div>
-
-                    <div>
-                      <p className="text-sm font-bold text-slate-950">
-                        School Management System
-                      </p>
-
-                      <p className="mt-1 text-xs leading-5 text-slate-500">
-                        Manage students, academics, attendance, finance and
-                        administration from one platform.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/about"
-            className="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
-          >
-            About
           </Link>
 
-          <Link
-            href="/contact"
-            className="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
-          >
-            Contact
-          </Link>
-
-          <Link
-            href="/book-demo"
-            className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-blue-700"
-          >
-            Book a Demo
-          </Link>
-        </nav>
-
-        {/* Mobile button */}
-        <button
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-700 md:hidden"
-        >
-          {open ? <X size={21} /> : <Menu size={21} />}
-        </button>
-      </div>
-
-      {/* Mobile navigation */}
-      {open && (
-        <div className="border-t border-slate-200 bg-white px-6 py-5 md:hidden">
-          <nav className="flex flex-col gap-1">
-            <div>
+          {/* Desktop Navigation — centered like the reference */}
+          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
+            {/* Products dropdown */}
+            <div className="relative">
               <button
-                type="button"
-                onClick={() => setProductsOpen(!productsOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-left font-semibold text-slate-700 hover:bg-slate-50"
+                  type="button"
+                  onClick={() => setProductsOpen(!productsOpen)}
+                  className="flex items-center gap-1.5 text-sm text-white/70 transition hover:text-white"
               >
                 Products
                 <ChevronDown
-                  size={17}
-                  className={`transition-transform ${
-                    productsOpen ? "rotate-180" : ""
-                  }`}
+                    size={15}
+                    className={`transition-transform ${
+                        productsOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               {productsOpen && (
-                <div className="ml-3 border-l border-slate-200 pl-3">
-                  <Link
-                    href="/products/school-management"
-                    onClick={() => setOpen(false)}
-                    className="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50"
-                  >
-                    School Management System
-                  </Link>
-                </div>
+                  <div className="absolute left-1/2 top-full mt-4 w-80 -translate-x-1/2 rounded-2xl bg-pine-800 p-2 shadow-2xl shadow-black/40 ring-1 ring-white/10">
+                    <Link
+                        href="/products/school-management"
+                        onClick={() => setProductsOpen(false)}
+                        className="block rounded-xl p-4 transition hover:bg-white/5"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-acid/15 text-base font-bold text-acid">
+                          S
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-white">
+                            School Management System
+                          </p>
+                          <p className="mt-1 text-xs leading-5 text-white/50">
+                            Manage students, academics, attendance, finance and
+                            administration from one platform.
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
               )}
             </div>
 
             <Link
-              href="/about"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50"
+                href="/about"
+                className="text-sm text-white/70 transition hover:text-white"
             >
               About
             </Link>
 
             <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50"
+                href="/contact"
+                className="text-sm text-white/70 transition hover:text-white"
             >
               Contact
             </Link>
-
-            <Link
-              href="/book-demo"
-              onClick={() => setOpen(false)}
-              className="mt-3 rounded-xl bg-blue-600 px-4 py-3 text-center font-bold text-white"
-            >
-              Book a Demo
-            </Link>
           </nav>
+
+          {/* Desktop CTA — white pill */}
+          <Link
+              href="/book-demo"
+              className="group hidden items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-pine-950 transition hover:bg-white/90 lg:inline-flex"
+          >
+            Book a Demo
+            <ArrowUpRight
+                size={15}
+                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
+          </Link>
+
+          {/* Mobile button */}
+          <button
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+              className="flex h-10 w-10 items-center justify-center rounded-xl text-white/80 transition hover:bg-white/10 lg:hidden"
+          >
+            {open ? <X size={21} /> : <Menu size={21} />}
+          </button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile navigation */}
+        {open && (
+            <div className="border-t border-white/10 bg-pine-900/95 px-6 py-5 backdrop-blur-xl lg:hidden">
+              <nav className="flex flex-col gap-1">
+                <div>
+                  <button
+                      type="button"
+                      onClick={() => setProductsOpen(!productsOpen)}
+                      className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-left font-medium text-white/80 hover:bg-white/5"
+                  >
+                    Products
+                    <ChevronDown
+                        size={17}
+                        className={`transition-transform ${
+                            productsOpen ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+
+                  {productsOpen && (
+                      <div className="ml-3 border-l border-white/10 pl-3">
+                        <Link
+                            href="/products/school-management"
+                            onClick={() => setOpen(false)}
+                            className="block rounded-lg px-4 py-3 text-sm font-medium text-white/60 hover:bg-white/5 hover:text-white"
+                        >
+                          School Management System
+                        </Link>
+                      </div>
+                  )}
+                </div>
+
+                <Link
+                    href="/about"
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-4 py-3 font-medium text-white/80 hover:bg-white/5"
+                >
+                  About
+                </Link>
+
+                <Link
+                    href="/contact"
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-4 py-3 font-medium text-white/80 hover:bg-white/5"
+                >
+                  Contact
+                </Link>
+
+                <Link
+                    href="/book-demo"
+                    onClick={() => setOpen(false)}
+                    className="mt-3 rounded-xl bg-acid px-4 py-3 text-center font-semibold text-pine-950"
+                >
+                  Book a Demo
+                </Link>
+              </nav>
+            </div>
+        )}
+      </header>
   );
 }

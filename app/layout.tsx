@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { Inter_Tight, Instrument_Serif } from "next/font/google";
 export const metadata: Metadata = {
   metadataBase: new URL("https://stanfordos.com"),
 
@@ -51,6 +51,17 @@ export const metadata: Metadata = {
   },
 };
 
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+});
 export default function RootLayout({
   children,
 }: Readonly<{

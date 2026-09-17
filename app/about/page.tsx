@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   Layers3,
   ShieldCheck,
@@ -12,7 +13,12 @@ import {
 export const metadata: Metadata = {
   title: "About Stanfordos",
   description:
-    "Learn about Stanfordos and our approach to building practical software for organizations that want simpler, more connected operations.",
+      "Learn about Stanfordos and our approach to building practical software for organizations that want simpler, more connected operations.",
+};
+
+const screenshots = {
+  management: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40.jpeg",
+  students: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (1).jpeg",
 };
 
 const principles = [
@@ -38,224 +44,308 @@ const principles = [
   },
 ];
 
+const stats = [
+  { value: "6+", label: "Core modules in one platform" },
+  { value: "4", label: "School teams supported" },
+  { value: "1", label: "Connected workspace" },
+];
+
 export default function AboutPage() {
   return (
-    <main className="bg-white">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-slate-950">
-        <div className="absolute inset-0">
-          <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
-          <div className="absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">
-              About Stanfordos
-            </p>
-
-            <h1 className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-              We build software that makes complex work feel simpler.
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
-              Stanfordos creates practical digital products that help
-              organizations bring their everyday operations together, make
-              better use of information and give their teams better tools to
-              work with.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-              What we believe
-            </p>
-
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Software should solve problems, not create more of them.
-            </h2>
+      <main className="bg-pine-950 font-sans text-white antialiased">
+        {/* =========================================================
+          HERO — grid pattern + glows + stats strip
+      ========================================================== */}
+        <section className="relative overflow-hidden">
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            {/* dot-grid that fades out downward */}
+            <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_70%_65%_at_50%_0%,black,transparent)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_-10%,rgba(23,94,75,0.6),transparent_60%)]" />
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-slate-600">
-            <p>
-              Organizations manage a lot of information every day. Students,
-              customers, finances, schedules, documents, people and decisions
-              all create moving parts.
-            </p>
-
-            <p>
-              When those processes are scattered across disconnected tools, work
-              becomes slower and visibility becomes harder.
-            </p>
-
-            <p>
-              Stanfordos is focused on building software that brings those
-              workflows together in a way that is clear, practical and easy to
-              use.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Principles */}
-      <section className="border-y border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-              Our approach
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Four things guide what we build.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {principles.map((principle) => {
-              const Icon = principle.icon;
-
-              return (
-                <div
-                  key={principle.title}
-                  className="rounded-3xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
-                    <Icon size={23} />
-                  </div>
-
-                  <h3 className="mt-6 text-xl font-black text-slate-950">
-                    {principle.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {principle.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Product */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-              Our first product
-            </p>
-
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Helping schools operate from one connected platform.
-            </h2>
-
-            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600">
-              The Stanfordos School Management System brings core school
-              operations into one environment, giving administrators and
-              educators better visibility into the information they manage every
-              day.
-            </p>
-
-            <div className="mt-8 space-y-4">
-              {[
-                "Student management",
-                "Academic administration",
-                "Attendance",
-                "School finance",
-                "Reports and insights",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 size={19} className="text-blue-600" />
-
-                  <span className="text-sm font-semibold text-slate-700">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <Link
-              href="/products/school-management"
-              className="mt-9 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-700"
-            >
-              Explore School Management
-              <ArrowRight size={17} />
-            </Link>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-5 rounded-[2rem] bg-blue-100/60 blur-2xl" />
-
-            <div className="relative rounded-3xl bg-slate-950 p-7 shadow-2xl">
-              <div className="flex items-center gap-3 border-b border-white/10 pb-6">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 font-black text-white">
-                  S
-                </div>
-
-                <div>
-                  <p className="font-bold text-white">Stanfordos</p>
-
-                  <p className="text-xs text-slate-400">
-                    Connected school operations
-                  </p>
-                </div>
+          <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-28 sm:pt-36 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acid opacity-60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-acid" />
+              </span>
+                About Stanfordos
               </div>
 
-              <div className="mt-7 grid grid-cols-2 gap-3">
-                {["Students", "Academics", "Attendance", "Finance"].map(
-                  (item) => (
-                    <div
-                      key={item}
-                      className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                    >
-                      <div className="h-2 w-16 rounded-full bg-blue-500" />
+              <h1 className="mt-8 text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
+                We build software that makes complex work{" "}
+                <span className="font-serif font-normal italic text-acid">
+                feel simpler.
+              </span>
+              </h1>
 
-                      <p className="mt-4 text-sm font-bold text-white">
-                        {item}
-                      </p>
-
-                      <p className="mt-1 text-xs text-slate-400">
-                        Connected workflow
-                      </p>
-                    </div>
-                  ),
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-blue-600">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
-            <div>
-              <h2 className="text-3xl font-black tracking-tight text-white">
-                Want to see what Stanfordos can do?
-              </h2>
-
-              <p className="mt-3 max-w-xl text-sm leading-7 text-blue-100">
-                Explore the School Management System or book a personalized
-                walkthrough with our team.
+              <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-white/60">
+                Stanfordos creates practical digital products that help
+                organizations bring their everyday operations together, make
+                better use of information and give their teams better tools to
+                work with.
               </p>
             </div>
 
-            <Link
-              href="/book-demo"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
-            >
-              Book a Demo
-              <ArrowRight size={17} />
-            </Link>
+            {/* Stats strip */}
+            <div className="mt-16 grid gap-10 border-t border-white/10 pt-10 sm:grid-cols-3">
+              {stats.map((stat) => (
+                  <div key={stat.label}>
+                    <p className="font-serif text-5xl italic text-white lg:text-6xl">
+                      {stat.value}
+                    </p>
+                    <p className="mt-3 text-sm text-white/50">{stat.label}</p>
+                  </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        {/* =========================================================
+          01 — WHAT WE BELIEVE, with pull-quote
+      ========================================================== */}
+        <section className="border-t border-white/5 bg-white/[0.02]">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div className="lg:sticky lg:top-28">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
+                  01 — What we believe
+                </p>
+
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+                  Software should solve problems,{" "}
+                  <span className="font-serif font-normal italic text-acid">
+                  not create more of them.
+                </span>
+                </h2>
+              </div>
+
+              <div className="space-y-5 pt-2 text-base leading-8 text-white/60 lg:pt-4">
+                <p>
+                  Organizations manage a lot of information every day. Students,
+                  customers, finances, schedules, documents, people and decisions
+                  all create moving parts.
+                </p>
+                <p>
+                  Stanfordos is focused on building software that brings those
+                  workflows together in a way that is clear, practical and easy to
+                  use.
+                </p>
+              </div>
+            </div>
+
+            {/* Pull-quote */}
+            <blockquote className="mx-auto mt-20 max-w-4xl text-center">
+            <span
+                aria-hidden
+                className="block font-serif text-7xl italic leading-none text-acid/30"
+            >
+              &ldquo;
+            </span>
+              <p className="text-balance font-serif text-3xl italic leading-snug text-white/90 sm:text-4xl">
+                When processes are scattered across disconnected tools, work
+                becomes slower — and visibility gets harder.
+              </p>
+            </blockquote>
+          </div>
+        </section>
+
+        {/* =========================================================
+          02 — PRINCIPLES, editorial numbered rows
+      ========================================================== */}
+        <section className="border-t border-white/5">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
+              02 — Our approach
+            </p>
+
+            <h2 className="mt-4 max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+              Four things guide{" "}
+              <span className="font-serif font-normal italic text-acid">
+              what we build.
+            </span>
+            </h2>
+
+            <div className="mt-14 border-t border-white/10">
+              {principles.map((principle, i) => {
+                const Icon = principle.icon;
+
+                return (
+                    <div
+                        key={principle.title}
+                        className="group grid gap-4 border-b border-white/10 py-10 transition-colors duration-300 hover:bg-white/[0.02] lg:grid-cols-[72px_1fr_1.3fr] lg:items-center lg:gap-10 lg:px-6"
+                    >
+                  <span className="font-serif text-3xl italic text-white/20 transition-colors duration-300 group-hover:text-acid lg:text-4xl">
+                    0{i + 1}
+                  </span>
+
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-acid/10 text-acid transition-colors duration-300 group-hover:bg-acid group-hover:text-pine-950">
+                          <Icon size={20} />
+                        </div>
+                        <h3 className="text-2xl font-semibold tracking-tight lg:text-[1.7rem]">
+                          {principle.title}
+                        </h3>
+                      </div>
+
+                      <p className="max-w-xl leading-7 text-white/60">
+                        {principle.text}
+                      </p>
+                    </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================
+          03 — FIRST PRODUCT, real screenshot + floating chip
+      ========================================================== */}
+        <section className="border-t border-white/5 bg-white/[0.02]">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+            <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
+                  03 — Our first product
+                </p>
+
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+                  Helping schools operate from{" "}
+                  <span className="font-serif font-normal italic text-acid">
+                  one connected platform.
+                </span>
+                </h2>
+
+                <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">
+                  The Stanfordos School Management System brings core school
+                  operations into one environment, giving administrators and
+                  educators better visibility into the information they manage
+                  every day.
+                </p>
+
+                <div className="mt-8 grid max-w-md gap-3 sm:grid-cols-2">
+                  {[
+                    "Student management",
+                    "Academic administration",
+                    "Attendance",
+                    "School finance",
+                    "Reports and insights",
+                  ].map((item) => (
+                      <div key={item} className="flex items-center gap-3">
+                        <CheckCircle2 size={18} className="shrink-0 text-acid" />
+                        <span className="text-sm font-medium text-white/80">
+                      {item}
+                    </span>
+                      </div>
+                  ))}
+                </div>
+
+                <Link
+                    href="/products/school-management"
+                    className="group mt-9 inline-flex items-center gap-2 rounded-xl bg-acid px-6 py-3.5 text-sm font-semibold text-pine-950 transition hover:brightness-105"
+                >
+                  Explore School Management
+                  <ArrowUpRight
+                      size={16}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </Link>
+              </div>
+
+              {/* Real screenshot in browser frame */}
+              <div className="relative">
+                <div
+                    aria-hidden
+                    className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(60%_60%_at_50%_40%,rgba(23,94,75,0.5),transparent_70%)] blur-2xl"
+                />
+
+                <div className="relative overflow-hidden rounded-2xl shadow-[0_40px_90px_-20px_rgba(0,0,0,0.65)] ring-1 ring-white/15">
+                  <div className="flex h-10 items-center gap-2 border-b border-white/10 bg-pine-900 px-4">
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                    <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-xs text-white/40">
+                      app.stanfordos.com
+                    </div>
+                  </div>
+
+                  <Image
+                      src={screenshots.management}
+                      alt="Stanfordos school management interface"
+                      width={1366}
+                      height={768}
+                      className="w-full"
+                  />
+                </div>
+
+                {/* Floating chip */}
+                <div className="absolute -bottom-5 -left-4 hidden items-center gap-3 rounded-2xl bg-white p-3.5 pr-6 shadow-2xl shadow-black/30 sm:flex">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <CheckCircle2 size={17} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-950">
+                      Everything connected.
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      One source of truth for your school.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================
+          CTA — dark panel with glow + grid texture
+      ========================================================== */}
+        <section className="px-6 pb-24 pt-20 lg:px-8">
+          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-pine-900 px-6 py-20 text-center ring-1 ring-white/10 sm:px-16">
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_70%_80%_at_50%_50%,black,transparent)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_115%,rgba(205,242,94,0.14),transparent_70%)]" />
+            </div>
+
+            <div className="relative">
+              <h2 className="mx-auto max-w-2xl text-balance text-4xl font-semibold tracking-[-0.02em] sm:text-5xl">
+                Want to see what Stanfordos{" "}
+                <span className="font-serif font-normal italic text-acid">
+                can do?
+              </span>
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/60">
+                Explore the School Management System or book a personalized
+                walkthrough with our team.
+              </p>
+
+              <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+                <Link
+                    href="/book-demo"
+                    className="group inline-flex items-center justify-center gap-2 rounded-xl bg-acid px-7 py-4 text-base font-semibold text-pine-950 transition hover:brightness-105"
+                >
+                  Book a Demo
+                  <ArrowUpRight
+                      size={17}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </Link>
+                <Link
+                    href="/products/school-management"
+                    className="inline-flex items-center justify-center rounded-xl border border-white/15 px-7 py-4 text-base font-semibold text-white transition hover:bg-white/5"
+                >
+                  Explore the platform
+                </Link>
+              </div>
+
+              <p className="mt-6 text-xs text-white/40">
+                Free personalized walkthrough · No commitment
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
   );
 }

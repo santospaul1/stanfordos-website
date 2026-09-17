@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+
+@theme inline {
+  --color-pine-950: #041b17;
+  --color-pine-900: #06231f;
+  --color-pine-800: #0b312a;
+  --color-pine-700: #10463b;
+  --color-acid: #cdf25e;
+  --color-mint: #7fe0c3;
+
+  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+}
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
@@ -168,3 +180,4 @@ select:focus {
   position: relative;
   z-index: 1;
 }
+
