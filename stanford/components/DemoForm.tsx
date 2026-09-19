@@ -68,6 +68,14 @@ const studentOptions = [
     "1,000+",
 ];
 
+const STUDENT_RANGE_ESTIMATE: Record<string, number> = {
+    "Below 100": 50,
+    "100 – 300": 200,
+    "301 – 500": 400,
+    "501 – 1,000": 750,
+    "1,000+": 1000,
+};
+
 export default function DemoForm() {
     const [step, setStep] = useState(1);
     const [form, setForm] = useState<FormData>(initialForm);
@@ -164,10 +172,7 @@ export default function DemoForm() {
             const api =
                 process.env.NEXT_PUBLIC_API_URL || "https://stanfordos.co.ke";
 
-            const students = parseInt(
-                String(form.students).replace(/[^\d]/g, ""),
-                10
-            );
+            const students = STUDENT_RANGE_ESTIMATE[form.students] ?? null;
 
             const res = await fetch(`${api}/api/contact-inquiries`, {
                 method: "POST",
@@ -181,6 +186,7 @@ export default function DemoForm() {
                     companyWebsite: form.website, // honeypot
                     message: [
                         form.role && `Role: ${form.role}`,
+                        form.students && `Students: ${form.students}`,
                         form.interests.length && `Interests: ${form.interests.join(", ")}`,
                         (form.date || form.time) &&
                         `Preferred demo: ${form.date} ${form.time}`.trim(),
@@ -226,7 +232,7 @@ export default function DemoForm() {
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-slate-600">
-                    Thanks for your interest in Stanfordos. Our team will review your request and contact you shortly using the details provided.
+                    Thanks for your interest in StanfordOS. Our team will review your request and contact you shortly using the details provided.
                 </p>
 
                 <div className="mx-auto mt-8 max-w-md rounded-2xl border border-slate-100 bg-slate-50/50 p-6 text-left shadow-sm">
@@ -538,7 +544,7 @@ export default function DemoForm() {
                     </div>
 
                     <p className="text-center text-xs font-medium leading-5 text-slate-400">
-                        By submitting this form, you agree to be contacted by the Stanfordos team.
+                        By submitting this form, you agree to be contacted by the StanfordOS team.
                     </p>
                 </div>
             )}

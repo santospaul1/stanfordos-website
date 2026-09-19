@@ -10,16 +10,16 @@ import {
 import DemoForm from "@/components/DemoForm";
 
 export const metadata: Metadata = {
-  title: "Book a Demo | Stanfordos",
+  title: "Book a Demo | StanfordOS",
   description:
-    "Book a personalized Stanfordos demo and see how your school can manage everyday operations from one connected platform.",
+    "Book a personalized StanfordOS demo and see how your school can manage everyday operations from one connected platform.",
 };
 
 const benefits = [
   "See the School Management System in action",
   "Explore the features most relevant to your school",
-  "Ask questions directly to the Stanfordos team",
-  "Understand how Stanfordos can fit your existing workflow",
+  "Ask questions directly to the StanfordOS team",
+  "Understand how StanfordOS can fit your existing workflow",
 ];
 
 export default function BookDemoPage() {
@@ -36,7 +36,7 @@ export default function BookDemoPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-300">
               <Sparkles size={15} />
-              See Stanfordos in action
+              See StanfordOS in action
             </div>
 
             <h1 className="mt-7 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -49,7 +49,7 @@ export default function BookDemoPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Book a personalized Stanfordos demo and explore how your school
+              Book a personalized StanfordOS demo and explore how your school
               can bring students, academics, administration, finance and
               reporting together in one connected platform.
             </p>
@@ -103,7 +103,7 @@ export default function BookDemoPage() {
                   </div>
 
                   <p className="text-sm leading-6 text-slate-300">
-                    Get answers from the Stanfordos team
+                    Get answers from the StanfordOS team
                   </p>
                 </div>
               </div>

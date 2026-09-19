@@ -39,8 +39,8 @@ export default function ContactPage() {
             icon={<Mail size={23} />}
             title="Email"
             description="Send us a message and we'll get back to you."
-            value="hello@stanfordos.com"
-            href="mailto:hello@stanfordos.com"
+            value="hello@stanfordos.co.ke"
+            href="mailto:hello@stanfordos.co.ke"
           />
 
           <ContactCard

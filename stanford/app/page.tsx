@@ -297,7 +297,7 @@ export default function HomePage() {
                   <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                   <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                   <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-xs text-white/40">
-                    app.stanfordos.com
+                    app.stanfordos.co.ke
                   </div>
                 </div>
 
