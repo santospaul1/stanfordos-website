@@ -19,7 +19,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
           >
             <Image
-                src="/logo2.jpg"
+                src="/logo3.png"
                 alt="Stanfordos"
                 width={180}
                 height={48}
@@ -27,7 +27,7 @@ export default function Navbar() {
                 className="h-9 w-auto object-contain lg:h-10"
             />
             <span className="text-xl font-semibold tracking-tight text-white">
-            Stanfordos
+            StanfordOS
           </span>
           </Link>
 

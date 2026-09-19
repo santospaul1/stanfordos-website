@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Stanfordos",
+  title: "About StanfordOS",
   description:
-      "Learn about Stanfordos and our approach to building practical software for organizations that want simpler, more connected operations.",
+      "Learn about StanfordOS and our approach to building practical software for organizations that want simpler, more connected operations.",
 };
 
 const screenshots = {
@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acid opacity-60" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-acid" />
               </span>
-                About Stanfordos
+                About StanfordOS
               </div>
 
               <h1 className="mt-8 text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
@@ -81,7 +81,7 @@ export default function AboutPage() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-white/60">
-                Stanfordos creates practical digital products that help
+                StanfordOS creates practical digital products that help
                 organizations bring their everyday operations together, make
                 better use of information and give their teams better tools to
                 work with.
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   all create moving parts.
                 </p>
                 <p>
-                  Stanfordos is focused on building software that brings those
+                  StanfordOS is focused on building software that brings those
                   workflows together in a way that is clear, practical and easy to
                   use.
                 </p>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">
-                  The Stanfordos School Management System brings core school
+                  The StanfordOS School Management System brings core school
                   operations into one environment, giving administrators and
                   educators better visibility into the information they manage
                   every day.
@@ -266,13 +266,13 @@ export default function AboutPage() {
                     <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                     <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                     <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-xs text-white/40">
-                      app.stanfordos.com
+                      app.StanfordOS.com
                     </div>
                   </div>
 
                   <Image
                       src={screenshots.management}
-                      alt="Stanfordos school management interface"
+                      alt="StanfordOS school management interface"
                       width={1366}
                       height={768}
                       className="w-full"
@@ -310,7 +310,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <h2 className="mx-auto max-w-2xl text-balance text-4xl font-semibold tracking-[-0.02em] sm:text-5xl">
-                Want to see what Stanfordos{" "}
+                Want to see what StanfordOS{" "}
                 <span className="font-serif font-normal italic text-acid">
                 can do?
               </span>

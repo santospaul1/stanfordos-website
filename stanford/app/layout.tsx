@@ -4,18 +4,21 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Inter_Tight, Instrument_Serif } from "next/font/google";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stanfordos.com"),
-
+  metadataBase: new URL("https://www.stanfordos.co.ke"),
   title: {
-    default: "Stanfordos | Software That Makes Organizations Smarter",
-    template: "%s | Stanfordos",
+    default: "StanfordOS | School management that stays out of the way",
+    template: "%s | StanfordOS",
+  },
+  icons: {
+    icon: "/logo2.jpg",
+    apple: "/logo2.jpg",
   },
 
   description:
-    "Stanfordos builds modern software solutions that simplify operations, connect teams, and help organizations grow.",
+    "StanfordOS builds modern software solutions that simplify operations, connect teams, and help organizations grow.",
 
   keywords: [
-    "Stanfordos",
+    "StanfordOS",
     "school management system",
     "school software",
     "education software",
@@ -26,21 +29,21 @@ export const metadata: Metadata = {
     "business software",
   ],
 
-  authors: [{ name: "Stanfordos" }],
-  creator: "Stanfordos",
+  authors: [{ name: "StanfordOS" }],
+  creator: "StanfordOS",
 
   openGraph: {
     type: "website",
-    siteName: "Stanfordos",
-    title: "Stanfordos | Software That Makes Organizations Smarter",
+    siteName: "StanfordOS",
+    title: "StanfordOS | Software That Makes Organizations Smarter",
     description:
       "Modern software solutions that simplify operations and help organizations grow.",
-    url: "https://stanfordos.com",
+    url: "https://www.stanfordos.co.ke",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Stanfordos",
+    title: "StanfordOS",
     description:
       "Modern software solutions that simplify operations and help organizations grow.",
   },
