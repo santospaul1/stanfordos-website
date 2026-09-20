@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,8 +10,15 @@ export default function Footer() {
             {/* Brand */}
             <div>
               <Link href="/" className="inline-flex items-center gap-2.5">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-acid font-semibold text-pine-950">
-                  S
+                <div className="flex h-9 w-9 items-center justify-center font-semibold ">
+                  <Image
+                      src="/logo3.png"
+                      alt="Stanfordos"
+                      width={180}
+                      height={48}
+                      priority
+                      className="h-9 w-auto object-contain lg:h-10"
+                  />
                 </div>
 
                 <span className="text-xl font-semibold tracking-tight">

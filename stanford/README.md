@@ -10,11 +10,7 @@ npm install
 
 ## 2. Configure demo email
 
-Create `.env.local` from `.env.example` and add your EmailJS Service ID, Template ID and Public Key.
 
-The form uses EmailJS in the browser so no private email password/API secret is stored in the frontend.
-
-### EmailJS template variables
 
 Create a template that uses these variables:
 
@@ -49,4 +45,3 @@ Open http://localhost:3000
 
 ## Later backend integration
 
-The DemoForm component is intentionally isolated. When the Stanfordos backend is ready, replace `emailjs.send(...)` with a `fetch('/api/v1/demos', ...)` request. The UI does not need to change.

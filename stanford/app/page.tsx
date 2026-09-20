@@ -8,28 +8,30 @@ import {
   CheckCircle2,
   ChevronRight,
   CreditCard,
-  LayoutDashboard,
   Users,
   UserRoundCheck,
   Settings2,
-  ShieldCheck,
   Sparkles, ClipboardCheck,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "School Management Software That Keeps Everything Connected",
   description:
-      "Stanfordos helps schools manage students, academics, attendance, finance and administration from one connected platform.",
+      "StanfordOS helps schools manage students, academics, attendance, finance and administration from one connected platform.",
 };
 
 const screenshots = {
   dashboard: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.39.jpeg",
-  management: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40.jpeg",
-  students: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (1).jpeg",
-  studentEdit: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (2).jpeg",
   additional1: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.41.jpeg",
   additional2: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.43.jpeg",
-  additional3: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.45.jpeg",
+};
+const productScreenshots = {
+  attendance: "/screenshots/attendance.png",
+  fees: "/screenshots/fees.png",
+  results: "/screenshots/results.png",
+  timetable: "/screenshots/timetable.png",
+  parentPortal: "/screenshots/parent-portal.png",
+  reports: "/screenshots/reports.png",
 };
 
 const features = [
@@ -98,65 +100,30 @@ const problems = [
   },
 ];
 
-const outcomes = [
-  "Spend less time searching for information",
-  "Reduce repetitive administrative work",
-  "Keep student information organized",
-  "Improve visibility across school operations",
-  "Give teams a connected workspace",
-  "Make better decisions with accessible data",
-];
-
-const audiences = [
-  {
-    icon: ShieldCheck,
-    title: "School Administrators",
-    description:
-        "Keep everyday school operations organized from a central platform.",
-  },
-  {
-    icon: LayoutDashboard,
-    title: "School Leaders",
-    description:
-        "Get a clearer view of the information needed to make informed decisions.",
-  },
-  {
-    icon: BookOpen,
-    title: "Teachers",
-    description:
-        "Access the student and academic information needed for everyday work.",
-  },
-  {
-    icon: CreditCard,
-    title: "Finance Teams",
-    description:
-        "Keep financial records and payment information easier to manage.",
-  },
-];
 
 const faqs = [
   {
-    question: "What is Stanfordos?",
+    question: "What is StanfordOS?",
     answer:
-        "Stanfordos is a software platform designed to help schools manage core operations such as students, academics, attendance, finance, administration and reporting from one connected system.",
+        "StanfordOS is a software platform designed to help schools manage core operations such as students, academics, attendance, finance, administration and reporting from one connected system.",
   },
   {
-    question: "Can I see Stanfordos before using it?",
+    question: "Can I see StanfordOS before using it?",
     answer:
         "Yes. You can book a personalized demo and our team can walk you through the platform and its capabilities.",
   },
   {
-    question: "Is Stanfordos suitable for different types of schools?",
+    question: "Is StanfordOS suitable for different types of schools?",
     answer:
         "The platform is designed around common school-management workflows. During a demo, we can discuss your school's specific requirements and workflow.",
   },
   {
     question: "Can multiple members of staff use the platform?",
     answer:
-        "Stanfordos is designed to support school teams and role-based workflows. Available roles and permissions can be discussed during your product demonstration.",
+        "StanfordOS is designed to support school teams and role-based workflows. Available roles and permissions can be discussed during your product demonstration.",
   },
   {
-    question: "Can Stanfordos be customized?",
+    question: "Can StanfordOS be customized?",
     answer:
         "If your school has specific requirements, we can discuss customization, integrations and deployment options during a consultation.",
   },
@@ -303,7 +270,7 @@ export default function HomePage() {
 
                 <Image
                     src={screenshots.dashboard}
-                    alt="Stanfordos school management dashboard"
+                    alt="StanfordOS school management dashboard"
                     width={1366}
                     height={768}
                     priority
@@ -344,7 +311,7 @@ export default function HomePage() {
                 </h2>
               </div>
               <p className="max-w-3xl text-lg leading-8 text-white/60">
-                Stanfordos brings the core parts of school operations together,
+                StanfordOS brings the core parts of school operations together,
                 giving administrators and teams a clearer way to manage
                 information, processes and everyday work.
               </p>
@@ -446,27 +413,182 @@ export default function HomePage() {
       ========================================================== */}
         <section id="product" className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
-              <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  See Stanfordos in action
-                </p>
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  Built to make everyday school operations{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  simpler.
-                </span>
-                </h2>
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  A clean workspace for the information and processes your school
-                  relies on every day.
+
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
+                Inside StanfordOS
+              </p>
+
+              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+                See how the platform works{" "}
+                <span className="font-serif font-normal italic text-acid">
+          across your school.
+        </span>
+              </h2>
+
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
+                Take a closer look at the workflows your team will use every day —
+                from attendance and finance to results, timetables, parent access and reports.
+              </p>
+            </div>
+
+            {/* Main dashboard */}
+            <div className="mt-14 overflow-hidden rounded-3xl bg-white/[0.03] p-2 shadow-[0_40px_90px_-20px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
+              <Image
+                  src={screenshots.dashboard}
+                  alt="StanfordOS school management dashboard"
+                  width={1366}
+                  height={768}
+                  className="w-full rounded-2xl"
+              />
+            </div>
+
+            {/* Two-column screenshots */}
+            <div className="mt-8 grid gap-8 lg:grid-cols-2">
+
+              {/* Attendance */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.attendance}
+                      alt="StanfordOS attendance management"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Attendance
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Record attendance and quickly understand student participation
+                  across classes and terms.
                 </p>
               </div>
+
+              {/* Finance */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.fees}
+                      alt="StanfordOS school fees management"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  School Finance
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Keep fee structures, invoices, balances and payment information
+                  organized in one place.
+                </p>
+              </div>
+
+              {/* Results */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.results}
+                      alt="StanfordOS student results and academic performance"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Results & Academic Performance
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Manage marks, results and academic performance while keeping
+                  information accessible to authorized staff.
+                </p>
+              </div>
+
+              {/* Timetable */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.timetable}
+                      alt="StanfordOS school timetable"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Timetable
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Keep classes, lessons and schedules organized and easy to access.
+                </p>
+              </div>
+            </div>
+
+            {/* Parent + Reports */}
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+
+              {/* Parent portal */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.parentPortal}
+                      alt="StanfordOS parent portal"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Parent Portal
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Give parents secure access to the information that matters to them,
+                  including their children's academic and financial records.
+                </p>
+              </div>
+
+              {/* Reports */}
+              <div>
+                <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
+                  <Image
+                      src={productScreenshots.reports}
+                      alt="StanfordOS school reports and insights"
+                      width={1366}
+                      height={768}
+                      className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-semibold">
+                  Reports & Insights
+                </h3>
+
+                <p className="mt-2 leading-7 text-white/60">
+                  Turn organized school information into useful reports for
+                  administrators and school leadership.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="mt-10 text-center">
               <Link
                   href="/products/school-management"
-                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-acid transition hover:text-white"
+                  className="group inline-flex items-center gap-2 text-sm font-semibold text-acid transition hover:text-white"
               >
-                View full product
+                Explore the complete School Management System
                 <ArrowUpRight
                     size={16}
                     className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -474,146 +596,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="mt-14 overflow-hidden rounded-3xl bg-white/[0.03] p-2 shadow-[0_40px_90px_-20px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
-              <Image
-                  src={screenshots.dashboard}
-                  alt="Stanfordos dashboard"
-                  width={1366}
-                  height={768}
-                  className="w-full rounded-2xl"
-              />
-            </div>
-
-            <div className="mt-8 grid gap-8 lg:grid-cols-2">
-              <div>
-                <div className="overflow-hidden rounded-2xl bg-white/[0.03] p-2 ring-1 ring-white/10">
-                  <Image
-                      src={screenshots.students}
-                      alt="Stanfordos student management"
-                      width={1366}
-                      height={768}
-                      className="w-full rounded-xl"
-                  />
-                </div>
-                <h3 className="mt-5 text-xl font-semibold">Student Management</h3>
-                <p className="mt-2 leading-7 text-white/60">
-                  Keep student information organized and accessible.
-                </p>
-              </div>
-
-              <div>
-                <div className="overflow-hidden rounded-2xl bg-white/[0.03] p-2 ring-1 ring-white/10">
-                  <Image
-                      src={screenshots.management}
-                      alt="Stanfordos administration interface"
-                      width={1366}
-                      height={768}
-                      className="w-full rounded-xl"
-                  />
-                </div>
-                <h3 className="mt-5 text-xl font-semibold">
-                  School Administration
-                </h3>
-                <p className="mt-2 leading-7 text-white/60">
-                  Give your team a centralized workspace for everyday operations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* =========================================================
-          OUTCOMES
-      ========================================================== */}
-        <section className="border-y border-white/5 bg-white/[0.02] py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  The outcome
-                </p>
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  More clarity.{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  Less administrative friction.
-                </span>
-                </h2>
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  Stanfordos is designed to help your team spend less time
-                  managing systems and more time focusing on the school.
-                </p>
-                <Link
-                    href="/book-demo"
-                    className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-acid px-6 py-3.5 text-sm font-semibold text-pine-950 transition hover:brightness-105"
-                >
-                  See how it works
-                  <ArrowUpRight
-                      size={16}
-                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </Link>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {outcomes.map((outcome) => (
-                    <div
-                        key={outcome}
-                        className="flex items-start gap-3 rounded-2xl bg-white/[0.03] p-5 ring-1 ring-white/10"
-                    >
-                      <CheckCircle2
-                          size={20}
-                          className="mt-0.5 shrink-0 text-acid"
-                      />
-                      <span className="font-medium leading-6 text-white/80">
-                    {outcome}
-                  </span>
-                    </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* =========================================================
-          WHO IT'S FOR
-      ========================================================== */}
-        <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                Built for school teams
-              </p>
-              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Everyone gets a{" "}
-                <span className="font-serif font-normal italic text-acid">
-                clearer way to work.
-              </span>
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-white/60">
-                Stanfordos brings different parts of your school together without
-                making everyday workflows unnecessarily complicated.
-              </p>
-            </div>
-
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {audiences.map((audience) => {
-                const Icon = audience.icon;
-                return (
-                    <div
-                        key={audience.title}
-                        className="rounded-2xl bg-white/[0.03] p-7 ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-white/20"
-                    >
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-mint/10 text-mint">
-                        <Icon size={19} />
-                      </div>
-                      <h3 className="mt-6 font-semibold">{audience.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-white/60">
-                        {audience.description}
-                      </p>
-                    </div>
-                );
-              })}
-            </div>
           </div>
         </section>
 
@@ -627,7 +609,7 @@ export default function HomePage() {
                 Getting started
               </p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-                See how Stanfordos fits your school.
+                See how StanfordOS fits your school.
               </h2>
             </div>
 
@@ -643,7 +625,7 @@ export default function HomePage() {
                   number: "02",
                   title: "See the platform",
                   description:
-                      "We'll walk you through Stanfordos and focus on the workflows relevant to your school.",
+                      "We'll walk you through StanfordOS and focus on the workflows relevant to your school.",
                 },
                 {
                   number: "03",
@@ -714,7 +696,7 @@ export default function HomePage() {
             </div>
 
             <h2 className="mt-8 text-balance text-4xl font-semibold tracking-[-0.02em] sm:text-5xl">
-              Ready to see Stanfordos{" "}
+              Ready to see StanfordOS{" "}
               <span className="font-serif font-normal italic">in action?</span>
             </h2>
 
@@ -735,7 +717,7 @@ export default function HomePage() {
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-xl border border-pine-950/15 px-7 py-4 text-base font-semibold text-pine-950 transition hover:bg-pine-950/5"
               >
-                Talk to Stanfordos
+                Talk to StanfordOS
               </Link>
             </div>
           </div>

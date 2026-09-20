@@ -63,33 +63,57 @@ const modules: {
 const screenshots = [
   {
     src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.41.jpeg",
-    title: "A complete school dashboard",
+    title: "School dashboard",
     description:
         "Get a clear overview of important school information as soon as you log in.",
   },
   {
-    src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (1).jpeg",
-    title: "Manage your school from one place",
-    description:
-        "Keep the different areas of your school connected through a centralized platform.",
-  },
-  {
     src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (2).jpeg",
-    title: "Student management made simple",
+    title: "Student management",
     description:
-        "Find and manage student information without navigating through disconnected systems.",
+        "Find students, manage profiles, classes, contacts and records from one place.",
   },
   {
-    src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.45.jpeg",
-    title: "Detailed student information",
+    src: "/screenshots/attendance.png",
+    title: "Attendance",
     description:
-        "Update and maintain student information using a structured, easy-to-use interface.",
+        "Record attendance and quickly understand student participation across classes and terms.",
+  },
+  {
+    src: "/screenshots/fees.png",
+    title: "School finance",
+    description:
+        "Keep fee structures, invoices, balances and payment information organized in one place.",
+  },
+  {
+    src: "/screenshots/results.png",
+    title: "Results & academic performance",
+    description:
+        "Manage marks and results while keeping academic information accessible to authorized staff.",
+  },
+  {
+    src: "/screenshots/timetable.png",
+    title: "Timetable",
+    description:
+        "Keep classes, lessons and schedules organized and easy to access.",
+  },
+  {
+    src: "/screenshots/parent-portal.png",
+    title: "Parent portal",
+    description:
+        "Give parents secure access to the information that matters to them, including academic and financial records.",
+  },
+  {
+    src: "/screenshots/reports.png",
+    title: "Reports & insights",
+    description:
+        "Turn organized school information into useful reports for administrators and school leadership.",
   },
 ];
 
 const faqs = [
   {
-    question: "What is the Stanfordos School Management System?",
+    question: "What is the StanfordOS School Management System?",
     answer:
         "It is a centralized platform designed to help schools manage administration, students, academics, and other everyday operations from one place.",
   },
@@ -104,7 +128,7 @@ const faqs = [
         "Yes. You can book a personalized demo and our team can walk you through the platform and its capabilities.",
   },
   {
-    question: "Can Stanfordos support our school's specific needs?",
+    question: "Can StanfordOS support our school's specific needs?",
     answer:
         "Book a demo with our team so we can understand your requirements and show you how the platform can fit into your school's workflow.",
   },
@@ -126,7 +150,7 @@ function BrowserFrame({
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1 text-xs text-white/40">
-            app.stanfordos.com
+            app.stanfordos.co.ke
           </div>
         </div>
 
@@ -160,7 +184,7 @@ export default function SchoolManagementPage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acid opacity-60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-acid" />
                 </span>
-                  Stanfordos School Management System
+                  StanfordOS School Management System
                 </div>
 
                 <h1 className="text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
@@ -220,7 +244,7 @@ export default function SchoolManagementPage() {
                 <div className="relative">
                   <BrowserFrame
                       src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.41.jpeg"
-                      alt="Stanfordos School Management System dashboard"
+                      alt="StanfordOS School Management System dashboard"
                       priority
                   />
                 </div>
@@ -229,28 +253,6 @@ export default function SchoolManagementPage() {
           </div>
         </section>
 
-
-        {/* INTRO */}
-        <section className="border-t border-white/5 bg-white/[0.02] px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-              One platform
-            </p>
-
-            <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-              Less complexity.{" "}
-              <span className="font-serif font-normal italic text-acid">
-              More control.
-            </span>
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/60">
-              Schools deal with large amounts of information every day. Stanfordos
-              brings that information together into a single, organized platform
-              designed to make everyday management easier.
-            </p>
-          </div>
-        </section>
 
         {/* FEATURES */}
         <section id="features" className="px-6 py-24 lg:px-8">
@@ -300,177 +302,7 @@ export default function SchoolManagementPage() {
           </div>
         </section>
 
-        {/* PRODUCT SHOWCASE */}
-        <section className="border-y border-white/5 bg-white/[0.02] px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid items-center gap-14 lg:grid-cols-2">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  Designed for clarity
-                </p>
-
-                <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  See your school{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  at a glance.
-                </span>
-                </h2>
-
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  The dashboard provides a centralized view of important school
-                  information, helping administrators understand what&apos;s
-                  happening without jumping between different systems.
-                </p>
-
-                <div className="mt-8 space-y-4">
-                  {[
-                    "Centralized information",
-                    "Clear dashboard overview",
-                    "Easy navigation",
-                    "Organized school records",
-                  ].map((item) => (
-                      <div key={item} className="flex items-center gap-3">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-acid/15 text-xs font-bold text-acid">
-                      ✓
-                    </span>
-
-                        <span className="font-medium text-white/80">{item}</span>
-                      </div>
-                  ))}
-                </div>
-              </div>
-
-              <BrowserFrame
-                  src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.43.jpeg"
-                  alt="Stanfordos school dashboard"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ADMINISTRATION */}
-        <section className="px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid items-center gap-14 lg:grid-cols-2">
-              <div className="order-2 lg:order-1">
-                <BrowserFrame
-                    src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (1).jpeg"
-                    alt="Stanfordos school administration dashboard"
-                />
-              </div>
-
-              <div className="order-1 lg:order-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  Administration
-                </p>
-
-                <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  Put your school&apos;s operations{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  in one place.
-                </span>
-                </h2>
-
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  Give your team a central place to work with the information they
-                  need every day.
-                </p>
-
-                <Link
-                    href="/book-demo"
-                    className="group mt-8 inline-flex items-center gap-1.5 text-base font-semibold text-acid transition hover:text-white"
-                >
-                  See it in a demo
-                  <ArrowUpRight
-                      size={16}
-                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* STUDENT MANAGEMENT */}
-        <section className="border-y border-white/5 bg-white/[0.02] px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid items-center gap-14 lg:grid-cols-2">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  Student management
-                </p>
-
-                <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  Keep student information{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  organized.
-                </span>
-                </h2>
-
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  Find student records quickly, view relevant information, and
-                  manage your school&apos;s student data through an organized
-                  interface.
-                </p>
-
-                <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Student profiles",
-                    "Search & filtering",
-                    "Class information",
-                    "Contact information",
-                  ].map((item) => (
-                      <div
-                          key={item}
-                          className="rounded-xl bg-white/[0.03] p-4 text-sm font-medium text-white/80 ring-1 ring-white/10"
-                      >
-                        <span className="mr-2 text-acid">✓</span>
-                        {item}
-                      </div>
-                  ))}
-                </div>
-              </div>
-
-              <BrowserFrame
-                  src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (2).jpeg"
-                  alt="Stanfordos student management interface"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* STUDENT RECORDS */}
-        <section className="px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid items-center gap-14 lg:grid-cols-2">
-              <BrowserFrame
-                  src="/screenshots/WhatsApp Image 2026-09-04 at 18.25.45.jpeg"
-                  alt="Stanfordos student information form"
-              />
-
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                  Student records
-                </p>
-
-                <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                  Information where{" "}
-                  <span className="font-serif font-normal italic text-acid">
-                  your team needs it.
-                </span>
-                </h2>
-
-                <p className="mt-6 text-lg leading-8 text-white/60">
-                  Keep important student information structured and accessible to
-                  authorized users while reducing unnecessary paperwork and
-                  fragmented records.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* INSIDE THE PLATFORM */}
+        {/* PRODUCT SCREENSHOT TOUR */}
         <section
             id="screenshots"
             className="border-y border-white/5 bg-white/[0.02] px-6 py-24 lg:px-8"
@@ -478,93 +310,64 @@ export default function SchoolManagementPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                Inside the platform
+                Inside StanfordOS
               </p>
 
               <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Built to be{" "}
+                See the platform{" "}
                 <span className="font-serif font-normal italic text-acid">
-                practical.
-              </span>
+                  in action.
+                </span>
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-white/60">
-                Explore some of the interfaces your team can use every day.
+                Explore the core workflows your school team can use every day,
+                from student management and attendance to finance, results and
+                parent access.
               </p>
             </div>
 
-            <div className="mt-14 grid gap-10 md:grid-cols-2">
-              {screenshots.slice(0, 2).map((screenshot) => (
-                  <div key={screenshot.src}>
-                    <div className="group overflow-hidden rounded-2xl ring-1 ring-white/10 transition hover:ring-white/25">
-                      <div className="overflow-hidden">
-                        <Image
-                            src={screenshot.src}
-                            alt={screenshot.title}
-                            width={1366}
-                            height={768}
-                            className="w-full transition duration-700 group-hover:scale-[1.02]"
-                        />
-                      </div>
+            <div className="mt-16 space-y-24">
+              {screenshots.map((screenshot, index) => (
+                  <div
+                      key={screenshot.src}
+                      className="grid items-center gap-12 lg:grid-cols-2"
+                  >
+                    <div className={index % 2 === 1 ? "lg:order-2" : "lg:order-1"}>
+                      <BrowserFrame
+                          src={screenshot.src}
+                          alt={`StanfordOS ${screenshot.title}`}
+                      />
                     </div>
 
-                    <h3 className="mt-6 text-xl font-semibold">
-                      {screenshot.title}
-                    </h3>
+                    <div className={index % 2 === 1 ? "lg:order-1" : "lg:order-2"}>
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
 
-                    <p className="mt-2 leading-7 text-white/60">
-                      {screenshot.description}
-                    </p>
+                      <h3 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                        {screenshot.title}
+                      </h3>
+
+                      <p className="mt-5 max-w-xl text-lg leading-8 text-white/60">
+                        {screenshot.description}
+                      </p>
+                    </div>
                   </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* BENEFITS */}
-        <section className="px-6 py-24 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-3xl bg-white/[0.03] p-8 ring-1 ring-white/10">
-                <div className="font-serif text-5xl italic text-white/25">01</div>
-
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
-                  Centralize information
-                </h3>
-
-                <p className="mt-4 leading-7 text-white/60">
-                  Reduce scattered records by bringing important school
-                  information together.
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-acid p-8 text-pine-950">
-                <div className="font-serif text-5xl italic text-pine-950/30">
-                  02
-                </div>
-
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
-                  Simplify daily work
-                </h3>
-
-                <p className="mt-4 leading-7 text-pine-950/70">
-                  Give administrators and staff a more organized way to handle
-                  everyday school processes.
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-pine-800 p-8 ring-1 ring-white/10">
-                <div className="font-serif text-5xl italic text-acid/60">03</div>
-
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
-                  Make better decisions
-                </h3>
-
-                <p className="mt-4 leading-7 text-white/60">
-                  Use organized information and reports to gain a clearer view of
-                  your institution.
-                </p>
-              </div>
+            <div className="mt-20 text-center">
+              <Link
+                  href="/book-demo"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-acid px-7 py-4 text-base font-semibold text-pine-950 transition hover:brightness-105"
+              >
+                See StanfordOS in a demo
+                <ArrowUpRight
+                    size={17}
+                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </Link>
             </div>
           </div>
         </section>
@@ -618,7 +421,7 @@ export default function SchoolManagementPage() {
 
             <div className="relative">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint sm:text-sm">
-                See Stanfordos in action
+                See StanfordOS in action
               </p>
 
               <h2 className="mx-auto mt-4 max-w-3xl text-balance text-4xl font-semibold tracking-[-0.02em] sm:text-5xl">
@@ -629,7 +432,7 @@ export default function SchoolManagementPage() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/60">
-                Book a personalized demo and let our team show you how Stanfordos
+                Book a personalized demo and let our team show you how StanfordOS
                 can fit into your school&apos;s workflow.
               </p>
 
