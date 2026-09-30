@@ -21,17 +21,17 @@ export const metadata: Metadata = {
 };
 
 const screenshots = {
-  dashboard: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.39.jpeg",
-  additional1: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.41.jpeg",
-  additional2: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.43.jpeg",
+  dashboard: "/screenshots/dashboard.webp",
+  additional1: "/screenshots/students-sm.webp",
+  additional2: "/screenshots/fees-sm.webp",
 };
 const productScreenshots = {
-  attendance: "/screenshots/attendance.png",
-  fees: "/screenshots/fees.png",
-  results: "/screenshots/results.png",
-  timetable: "/screenshots/timetable.png",
-  parentPortal: "/screenshots/parent-portal.png",
-  reports: "/screenshots/reports.png",
+  attendance: "/screenshots/attendance.webp",
+  fees: "/screenshots/fees.webp",
+  results: "/screenshots/results.webp",
+  timetable: "/screenshots/timetable.webp",
+  parentPortal: "/screenshots/parent-portal.webp",
+  reports: "/screenshots/reports.webp",
 };
 
 const features = [
@@ -209,8 +209,8 @@ export default function HomePage() {
                 <Image
                     src={screenshots.additional1}
                     alt=""
-                    width={1366}
-                    height={768}
+                    width={768}
+                    height={390}
                     className="h-[400px] w-full rounded-2xl object-cover object-left-top shadow-2xl shadow-black/50 ring-1 ring-white/20 xl:h-[480px]"
                 />
               </div>
@@ -223,8 +223,8 @@ export default function HomePage() {
                 <Image
                     src={screenshots.additional2}
                     alt=""
-                    width={1366}
-                    height={768}
+                    width={768}
+                    height={390}
                     className="h-[400px] w-full rounded-2xl object-cover object-right-top shadow-2xl shadow-black/50 ring-1 ring-white/20 xl:h-[480px]"
                 />
               </div>
@@ -270,9 +270,9 @@ export default function HomePage() {
 
                 <Image
                     src={screenshots.dashboard}
-                    alt="StanfordOS school management dashboard"
-                    width={1366}
-                    height={768}
+                    alt="StanfordOS admin dashboard showing student, teacher, class and attendance totals"
+                    width={1326}
+                    height={673}
                     priority
                     className="w-full"
                 />
@@ -436,9 +436,9 @@ export default function HomePage() {
             <div className="mt-14 overflow-hidden rounded-3xl bg-white/[0.03] p-2 shadow-[0_40px_90px_-20px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
               <Image
                   src={screenshots.dashboard}
-                  alt="StanfordOS school management dashboard"
-                  width={1366}
-                  height={768}
+                  alt="StanfordOS admin dashboard showing student, teacher, class and attendance totals"
+                  width={1326}
+                  height={673}
                   className="w-full rounded-2xl"
               />
             </div>
@@ -451,9 +451,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
                   <Image
                       src={productScreenshots.attendance}
-                      alt="StanfordOS attendance management"
-                      width={1366}
-                      height={768}
+                      alt="StanfordOS attendance register with Present, Absent, Late and Excused options per student"
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>
@@ -473,9 +473,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
                   <Image
                       src={productScreenshots.fees}
-                      alt="StanfordOS school fees management"
-                      width={1366}
-                      height={768}
+                      alt="StanfordOS fee collection page with invoices, totals and payment method breakdown"
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>
@@ -496,8 +496,8 @@ export default function HomePage() {
                   <Image
                       src={productScreenshots.results}
                       alt="StanfordOS student results and academic performance"
-                      width={1366}
-                      height={768}
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>
@@ -517,9 +517,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
                   <Image
                       src={productScreenshots.timetable}
-                      alt="StanfordOS school timetable"
-                      width={1366}
-                      height={768}
+                      alt="StanfordOS weekly teacher timetable with lessons and break times"
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>
@@ -542,9 +542,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
                   <Image
                       src={productScreenshots.parentPortal}
-                      alt="StanfordOS parent portal"
-                      width={1366}
-                      height={768}
+                      alt="StanfordOS parent portal showing each child with attendance, results, report card and fees links"
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>
@@ -564,9 +564,9 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl bg-white/[0.03] p-2 ring-1 ring-white/10">
                   <Image
                       src={productScreenshots.reports}
-                      alt="StanfordOS school reports and insights"
-                      width={1366}
-                      height={768}
+                      alt="StanfordOS dashboard with attendance trend chart and key school statistics"
+                      width={1326}
+                      height={673}
                       className="w-full rounded-2xl transition duration-500 hover:scale-[1.01]"
                   />
                 </div>

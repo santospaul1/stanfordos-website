@@ -62,37 +62,37 @@ const modules: {
 
 const screenshots = [
   {
-    src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.41.jpeg",
+    src: "/screenshots/dashboard.webp",
     title: "School dashboard",
     description:
         "Get a clear overview of important school information as soon as you log in.",
   },
   {
-    src: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (2).jpeg",
+    src: "/screenshots/reports.webp",
     title: "Student management",
     description:
         "Find students, manage profiles, classes, contacts and records from one place.",
   },
   {
-    src: "/screenshots/attendance.png",
+    src: "/screenshots/attendance.webp",
     title: "Attendance",
     description:
         "Record attendance and quickly understand student participation across classes and terms.",
   },
   {
-    src: "/screenshots/fees.png",
+    src: "/screenshots/fees-sm.webp",
     title: "School finance",
     description:
         "Keep fee structures, invoices, balances and payment information organized in one place.",
   },
   {
-    src: "/screenshots/results.png",
+    src: "/screenshots/results.webp",
     title: "Results & academic performance",
     description:
         "Manage marks and results while keeping academic information accessible to authorized staff.",
   },
   {
-    src: "/screenshots/timetable.png",
+    src: "/screenshots/timetable.webp",
     title: "Timetable",
     description:
         "Keep classes, lessons and schedules organized and easy to access.",
@@ -104,7 +104,7 @@ const screenshots = [
         "Give parents secure access to the information that matters to them, including academic and financial records.",
   },
   {
-    src: "/screenshots/reports.png",
+    src: "/screenshots/reports2.webp",
     title: "Reports & insights",
     description:
         "Turn organized school information into useful reports for administrators and school leadership.",

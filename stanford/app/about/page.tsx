@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 };
 
 const screenshots = {
-  management: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40.jpeg",
-  students: "/screenshots/WhatsApp Image 2026-09-04 at 18.25.40 (1).jpeg",
+  management: "/screenshots/students.webp",
+  students: "/screenshots/students-sm.webp",
 };
 
 const principles = [
